@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #26352b;
+    background-color: #f6f3eb;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f6f3eb;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #26352b;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #71856f;
+}
+
+
+/* =========================
+   HERO SLIDESHOW
+========================= */
+
+.hero {
+    min-height: 600px;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 0;
+    transition: opacity 1.8s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(15, 25, 18, 0.70) 0%,
+        rgba(15, 25, 18, 0.45) 45%,
+        rgba(15, 25, 18, 0.20) 100%
+    );
+
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+    color: white;
+}
+
+.small-title,
+.section-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.hero p {
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin-top: 18px;
+    background: #f6f3eb;
+    color: #26352b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #26352b;
+    color: #f6f3eb;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    padding: 80px 7% 50px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 45px;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.intro-text {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+    color: #687268;
+}
+
+
+/* =========================
+   DESTINASI
+========================= */
+
+/* =========================
+   DESTINASI SLIDER
+========================= */
+
+.destination-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.destination-slider {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.5s ease;
+}
+
+.destination-card {
+    flex: 0 0 calc((100% - 50px) / 3);
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.destination-navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.destination-navigation button {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #26352b;
+    background: transparent;
+    color: #26352b;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.destination-navigation button:hover {
+    background: #26352b;
+    color: white;
+}
+
+.destinasi {
+    padding: 50px 7%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin-top: 12px;
+}
+
+.section-heading a {
+    color: #26352b;
+    text-decoration: none;
+}
+
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    background-color: white;
+}
+
+.destination-image {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #879681;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.destination-image span {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 13px;
+    z-index: 2;
+}
+
+.destination-info {
+    padding: 25px;
+}
+
+.destination-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.destination-info p {
+    color: #687268;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.destination-location {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.destination-location span {
+    font-size: 13px;
+    color: #71856f;
+}
+
+.destination-location a {
+    font-size: 13px;
+    color: #26352b;
+    text-decoration: none;
+}
+
+.destination-location a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   VIDEO DESTINASI
+========================= */
+
+.video-destinasi {
+    padding: 50px 7% 100px;
+}
+
+.video-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.video-destinasi .section-heading {
+    margin-bottom: 45px;
+}
+
+.video-navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.video-navigation button {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #26352b;
+    background: transparent;
+    color: #26352b;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.video-navigation button:hover {
+    background: #26352b;
+    color: white;
+}
+
+.video-slider {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.5s ease;
+}
+
+.video-card {
+    flex: 0 0 calc((100% - 50px) / 3);
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.video-thumbnail {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.9);
+    color: #26352b;
+    border-radius: 50%;
+
+    text-decoration: none;
+    font-size: 18px;
+
+    transition: 0.3s ease;
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-info {
+    padding: 22px 5px 10px;
+}
+
+.video-location {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #71856f;
+    margin-bottom: 8px;
+}
+
+.video-info h3 {
+    font-size: 24px;
+    color: #26352b;
+    margin-bottom: 12px;
+}
+
+.video-info a {
+    color: #26352b;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.video-info a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 80px;
+    padding: 60px 7%;
+    background-color: #26352b;
+    color: white;
+}
+
+footer h3 {
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-bottom: 30px;
+    color: #c8cec8;
+}
+
+footer small {
+    color: #aeb7ae;
+}
+
+.instagram {
+    margin: 15px 0 25px;
+    font-size: 14px;
+}
+
+.instagram a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.instagram a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
