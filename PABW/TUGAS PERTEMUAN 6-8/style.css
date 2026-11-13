@@ -1,0 +1,324 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #E5E1D7;
+    color: #353D34;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: #F2EFE7;
+    border: 1px solid #CBC8BA;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 30px;
+    border-bottom: 1px solid #CBC8BA;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #77766B;
+}
+
+/* Main layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+}
+
+/* Information section */
+.information {
+    background: #596653;
+    color: #F2EFE7;
+    padding: 55px 38px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #C4C7B5;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.information h1 {
+    font-size: 38px;
+    line-height: 1.15;
+    max-width: 280px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #D9DCCE;
+    max-width: 290px;
+}
+
+/* Discount information */
+.discount-info {
+    margin-top: 55px;
+}
+
+.section-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #C4C7B5;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+.discount-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 0;
+    border-top: 1px solid rgba(242, 239, 231, 0.22);
+    gap: 10px;
+    font-size: 12px;
+    color: #E1E3D9;
+}
+
+.discount-row strong {
+    font-size: 15px;
+    color: #E2C8AC;
+}
+
+.note {
+    margin-top: auto;
+    padding-top: 35px;
+    font-size: 11px;
+    color: #C4C7B5;
+    line-height: 1.6;
+}
+
+/* Calculator section */
+.calculator {
+    padding: 55px 38px 40px;
+    background: #F2EFE7;
+}
+
+.form-heading {
+    margin-bottom: 45px;
+}
+
+.form-heading span,
+.result-heading > span:first-child {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #929080;
+    font-weight: 700;
+}
+
+.form-heading h2 {
+    margin-top: 12px;
+    font-size: 25px;
+    color: #353D34;
+    letter-spacing: -0.5px;
+}
+
+/* Form */
+form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #596653;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #A49A83;
+    background: #EAE7DE;
+    transition: 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: #596653;
+}
+
+.input-group span {
+    padding: 16px 18px;
+    color: #78836D;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 17px;
+    color: #353D34;
+}
+
+.input-group input::placeholder {
+    color: #AAA698;
+}
+
+/* Button */
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px 18px;
+    background: #596653;
+    border: 1px solid #596653;
+    color: #F2EFE7;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.25s;
+}
+
+button span {
+    font-size: 18px;
+}
+
+button:hover {
+    background: #353D34;
+    border-color: #353D34;
+}
+
+/* Result */
+.result {
+    margin-top: 38px;
+    padding-top: 22px;
+    border-top: 1px solid #CBC8BA;
+}
+
+.result-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.status {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #596653;
+    border: 1px solid #A4AD98;
+    padding: 5px 8px;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+    color: #77766B;
+    margin-bottom: 17px;
+}
+
+.receipt-row strong {
+    color: #353D34;
+    text-align: right;
+}
+
+.discount {
+    color: #A16F68 !important;
+}
+
+.payment {
+    border-top: 1px dashed #A49A83;
+    margin-top: 22px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment span {
+    font-size: 12px;
+    color: #77766B;
+}
+
+.payment strong {
+    font-size: 23px;
+    color: #596653;
+}
+
+/* Error */
+.error {
+    margin-top: 18px;
+    padding: 12px;
+    background: #EFE0DB;
+    color: #965D57;
+    font-size: 12px;
+    border-left: 3px solid #A16F68;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 30px;
+    border-top: 1px solid #CBC8BA;
+    color: #929080;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    body {
+        padding: 18px 12px;
+        align-items: flex-start;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .information {
+        padding: 35px 25px;
+    }
+
+    .information h1 {
+        font-size: 32px;
+    }
+
+    .discount-info {
+        margin-top: 35px;
+    }
+
+    .calculator {
+        padding: 35px 25px;
+    }
+
+    .form-heading {
+        margin-bottom: 30px;
+    }
+
+    footer {
+        padding: 15px 20px;
+        font-size: 9px;
+    }
+}
